@@ -50,29 +50,53 @@
             cursor: pointer;
             border-radius: 0; /* Make the button square */
         }
-        
+         .youtube-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .youtube-link {
+            margin: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+
+        .youtube-link img {
+            width: 120px; /* Set width for the thumbnail */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Adjust spacing between thumbnail and link */
+        }
+
+        .youtube-link:hover {
+            text-decoration: underline; /* Underline the link on hover */
+        }
 
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="FrontPage.png" alt="Image 1">
-        <img src="Story.png" alt="Image 2">
-        <img src="Genre.png" alt="Image 3">
-        <img src="Ingame_1.png" alt="Image 4">
-        <img src="Ingame_2.png" alt="Image 5">
-        <img src="AI.png" alt="Image 6">
-        <img src="Enemy.png" alt="Image 7">
-        <img src="Enemy_2.png" alt="Image 8">
-        <img src="Ships.png" alt="Image 9">
-        <!-- Add more <img> tags for additional images -->
-    </div>
       <div class="button-container">
         <button id="button1">Home</button>
         <button id="button2">Vision</button>
         <button id="button3">Studio</button>
         <button id="button4"> Arts </button>
         <button id="button5"> Videos </button>
+    </div>
+     <div class="youtube-links">
+        <a class="youtube-link" href="https://youtu.be/OyEiFNsStoI?si=VrazOjjmXysOL-6i" target="_blank">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/OyEiFNsStoI?si=5NDn2AvTlSJdym_C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </a>
+        <a class="youtube-link" href="https://youtu.be/vIkZEM1ygMs?si=WolpjLoEH3swa4Oh" target="_blank">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vIkZEM1ygMs?si=WolpjLoEH3swa4Oh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </a>
+        <a class="youtube-link" href="https://youtu.be/eRePS0jLQ4g?si=joZrXbEligPlfHUP" target="_blank">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/eRePS0jLQ4g?si=PhCnEMBJ4JGJNr8_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </a>
+       
+        <!-- Add more <a> tags for additional YouTube links -->
     </div>
     <script>
         document.getElementById("button1").addEventListener("click", function() {
