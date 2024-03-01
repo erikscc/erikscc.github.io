@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Reality Games - Lighthouse Project</title>
+     <title>Escape Reality Games - Lighthouse Project</title>
+    <style>
+        body {
+            
+           background: linear-gradient(to bottom, #000, #05080b); /* Gradient from black to white */
+            position: relative; /* Required for absolute positioning of buttons */
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Align items to the center horizontally */
+        }
+
+        .image-container img {
+            width: 80%; /* 50% of the container width */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 85%; /* Ensure images don't exceed their original size */
+            margin: 5px; /* Adjust margin as needed */
+        }
+
+        .image-container img:first-child {
+            align-self: flex-start; /* Align the first image to the top */
+        }
+        
+       .button-container {
+            position: fixed;
+            bottom: 15px; /* Distance from the bottom of the viewport */
+            left: 50%; /* Align to the center horizontally */
+            transform: translateX(-50%); /* Adjust horizontally to center */
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            z-index: 999; /* Ensure the buttons are on top of other content */
+        }
+
+        .button-container button {
+            margin: 0 15px; /* Adjust spacing between buttons */
+            padding: 20px; /* Adjust button padding to make them square */
+            font-size: 16px; /* Adjust button font size */
+            background-color: #8B4513; /* Dark orange color */
+            border: 3px solid #381e07; /* Dark brown border */
+            color: white; /* Text color */
+            cursor: pointer;
+            border-radius: 0; /* Make the button square */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="FrontPage.png" alt="Image 1">
+        <img src="Story.png" alt="Image 2">
+        <img src="Genre.png" alt="Image 3">
+        <img src="Ingame_1.png" alt="Image 4">
+        <img src="Ingame_2.png" alt="Image 5">
+        <img src="AI.png" alt="Image 6">
+        <img src="Enemy.png" alt="Image 7">
+        <img src="Enemy_2.png" alt="Image 8">
+        <img src="Ships.png" alt="Image 9">
+        <!-- Add more <img> tags for additional images -->
+    </div>
+      <div class="button-container">
+        <button id="button1">Home</button>
+        <button id="button2">Vision</button>
+        <button id="button3">Studio</button>
+        <button id="button4"> Arts </button>
+        <button id="button5"> Video </button>
+    </div>
+    <script>
+        document.getElementById("button1").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("button2").addEventListener("click", function() {
+            window.location.href = "vision.html";
+        }); 
+        document.getElementById("button3").addEventListener("click", function() {
+            window.location.href = "team.html";
+        }); 
+        document.getElementById("button4").addEventListener("click", function() {
+            window.location.href = "art.html";
+        }); 
+        document.getElementById("button5").addEventListener("click", function() {
+            window.location.href = "videos.html";
+        });
+
+        // Add similar event listeners for other buttons if needed
+    </script>
+</body>
+</html>
