@@ -7,87 +7,99 @@
      <title>Escape Reality Games - Lighthouse Project</title>
     <style>
         body {
-            
-           background: linear-gradient(to bottom, #000, #05080b); /* Gradient from black to white */
-            position: relative; /* Required for absolute positioning of buttons */
+            background: linear-gradient(to bottom, #000, #05080b);
+            position: relative;
         }
 
         .image-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Align items to the center horizontally */
+            justify-content: center;
         }
 
         .image-container img {
-            width: 80%; /* 50% of the container width */
-            height: auto; /* Maintain aspect ratio */
-            max-width: 85%; /* Ensure images don't exceed their original size */
-            margin: 5px; /* Adjust margin as needed */
+            width: 80%;
+            height: auto;
+            max-width: 85%;
+            margin: 5px;
         }
 
         .image-container img:first-child {
-            align-self: flex-start; /* Align the first image to the top */
+            align-self: flex-start;
         }
-        
-       .button-container {
+
+        .button-container {
             position: fixed;
-            bottom: 15px; /* Distance from the bottom of the viewport */
-            left: 50%; /* Align to the center horizontally */
-            transform: translateX(-50%); /* Adjust horizontally to center */
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             justify-content: center;
-            width: 100%;
-            z-index: 999; /* Ensure the buttons are on top of other content */
+            width: 80%; /* Set width of the button container */
+            background-color: white; /* White background */
+            padding: 5px; /* Add padding */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow */
+            z-index: 999;
         }
 
         .button-container button {
-            margin: 0 15px; /* Adjust spacing between buttons */
-            padding: 20px; /* Adjust button padding to make them square */
-            font-size: 16px; /* Adjust button font size */
-            background-color: #8B4513; /* Dark orange color */
-            border: 3px solid #381e07; /* Dark brown border */
-            color: white; /* Text color */
+            flex: 1; /* Make buttons take up equal width */
+            margin: 0 0px; /* Adjust spacing between buttons */
+            padding: 10px;
+            font-size: 16px;
+            background-color: #8B4513;
+            border: 1px solid #381e07;
+            color: white;
             cursor: pointer;
-            border-radius: 0; /* Make the button square */
+            border-radius: 0;
+            width: 100%; /* Set button width to 100% */
         }
-
     </style>
 </head>
 <body>
     <div class="image-container">
-        <img src="Vision_1.png" alt="Image 1">
-        <img src="Vision_3.png" alt="Image 2">
-        <img src="Vision_2.png" alt="Image 3">
-        <img src="Vision_4.png" alt="Image 4">
-        <img src="Vision_5.png" alt="Image 5">
-        <img src="Vision_6.png" alt="Image 6">
+        <img src="Art.png" alt="Image 1">
+        <img src="Art_2.png" alt="Image 3">
+        <img src="Art_1.png" alt="Image 2">
+        <img src="Vision_1.png" alt="Image 5">
+        <img src="Vision_3.png" alt="Image 6">
+        <img src="Vision_2.png" alt="Image 7">
+        <img src="Vision_4.png" alt="Image 8">
+        <img src="Art_3.png" alt="Image 4">
+        <img src="Vision_5.png" alt="Image 9">
+        <img src="Vision_6.png" alt="Image 10">
        
         <!-- Add more <img> tags for additional images -->
     </div>
-      <div class="button-container">
+    <div class="button-container">
         <button id="button1">Home</button>
-        <button id="button2">Vision</button>
+        <button id="button2">Vision & Art</button>
         <button id="button3">Studio</button>
-        <button id="button4"> Arts </button>
-        <button id="button5"> Video </button>
+        <button id="button4">Financials</button>
+        <button id="button5">Videos</button>
     </div>
-    <script>
+   <script>
         document.getElementById("button1").addEventListener("click", function() {
             window.location.href = "index.html";
         });
 
         document.getElementById("button2").addEventListener("click", function() {
             window.location.href = "vision.html";
-        }); 
+        });
+
         document.getElementById("button3").addEventListener("click", function() {
             window.location.href = "team.html";
         }); 
+        
         document.getElementById("button4").addEventListener("click", function() {
-            window.location.href = "art.html";
-        }); 
-         document.getElementById("button5").addEventListener("click", function() {
-            window.location.href = "videos.html";
+            window.location.href = "financials.html";
         });
+
+        document.getElementById("button5").addEventListener("click", function() {
+            window.location.href = "videos.html";
+        }); 
+        
 
         // Add similar event listeners for other buttons if needed
     </script>
