@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erik Carlsson</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #000, #05080b);
+            position: relative;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-container img {
+            width: 80%;
+            height: auto;
+            max-width: 85%;
+            margin: 5px;
+        }
+
+        .image-container img:first-child {
+            align-self: flex-start;
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            width: 80%; /* Set width of the button container */
+            background-color: white; /* White background */
+            padding: 5px; /* Add padding */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow */
+            z-index: 999;
+        }
+
+        .button-container button {
+            flex: 1; /* Make buttons take up equal width */
+            margin: 0 0px; /* Adjust spacing between buttons */
+            padding: 10px;
+            font-size: 16px;
+            background-color: #a84141;
+            border: 1px solid #381e07;
+            color: white;
+            cursor: pointer;
+            border-radius: 0;
+            width: 100%; /* Set button width to 100% */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="BD_1.png" alt="Image 1">
+        <img src="BD_2.png" alt="Image 2">
+        <!-- Add more <img> tags for additional images -->
+    </div>
+    <div class="button-container">
+       <button id="button1">Home</button>
+        <button id="button2">Business Developer</button>
+        <button id="button3">Game Developer</button>
+        <button id="button4">Portfolio</button>
+        <button id="button5">Videos</button>
+    </div>
+    <script>
+        document.getElementById("button1").addEventListener("click", function() {
+            window.location.href = "erikc.html";
+        });
+
+        document.getElementById("button2").addEventListener("click", function() {
+            window.location.href = "bd.html";
+        });
+
+        document.getElementById("button3").addEventListener("click", function() {
+            window.location.href = "gd.html";
+        }); 
+        
+        document.getElementById("button4").addEventListener("click", function() {
+            window.location.href = "portfolio.html";
+        });
+
+        document.getElementById("button5").addEventListener("click", function() {
+            window.location.href = "videos.html";
+        });
+
+
+        // Add similar event listeners for other buttons if needed
+    </script>
+</body>
+</html>
