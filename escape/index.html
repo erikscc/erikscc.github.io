@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Reality Games - Lighthouse Project</title>
+    <style>
+        body {
+            background-image: url('blue.jpg'); /* Set background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Keep the background image fixed */
+            position: relative;
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+        }
+
+        .content {
+            position: relative; /* Adjust position if necessary */
+            overflow-y: auto; /* Set overflow to auto for vertical scrolling */
+            height: 100vh; /* Set height to 100% of viewport height */
+            padding-bottom: 80px; /* Adjust bottom padding for button container */
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-placeholder {
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent; /* Optional: Change the background color */
+        }
+
+        .image-container img {
+            width: 80%;
+            height: auto;
+            max-width: 85%;
+            margin: 5px;
+        }
+
+        .image-container img:first-child {
+            align-self: flex-start;
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            width: 80%; /* Set width of the button container */
+            background-color: white; /* White background */
+            padding: 5px; /* Add padding */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow */
+            z-index: 999;
+        }
+
+        .button-container button {
+            flex: 1; /* Make buttons take up equal width */
+            margin: 0 0px; /* Adjust spacing between buttons */
+            padding: 10px;
+            font-size: 16px;
+            background-color: #a84141;
+            border: 1px solid #381e07;
+            color: white;
+            cursor: pointer;
+            border-radius: 0;
+            width: 100%; /* Set button width to 100% */
+        }
+        .myVideo {
+             position: fixed;
+             right: 0;
+             bottom: 0;
+             min-width: 100%; 
+             min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+   <video autoplay muted loop id="myVideo">
+   <source src="Intro.mp4" type="video/mp4">
+        Any alternate text.
+   </video>
+
+   <div class="content">
+     <div class="image-container">
+        <img src="cs.png" alt="Image 1">
+        <img src="About.png" alt="Image 1">
+       
+        <!-- Add more <img> tags for additional images -->
+     </div>
+   </div>
+   <div class="button-container">
+        <button id="button1">Home</button>
+        <button id="button2">Games</button>
+       
+    </div>
+    <script>
+        document.getElementById("button1").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("button2").addEventListener("click", function() {
+            window.location.href = "games.html";
+        });
+
+        
+        
+
+        // Add similar event listeners for other buttons if needed
+    </script>
+</body>
+</html>
